@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "UrbanSustainabilityAnalysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e4dddff5-edb6-42dd-9c79-bfd1906b9607"
+  }
+}
