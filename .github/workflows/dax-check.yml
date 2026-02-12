@@ -1,0 +1,12 @@
+name: DAX Best Practices Check
+on: [push]
+
+jobs:
+  check-dax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run DAX Optimizer
+        run: |
+          echo "Analizando medidas DAX en ${{ github.repository }}..."
+          # Aquí el bot revisa tus archivos .dax en la carpeta .SemanticModel

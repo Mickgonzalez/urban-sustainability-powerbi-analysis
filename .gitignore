@@ -1,2 +1,16 @@
+# Archivos de configuración personal de Power BI
 **/.pbi/localSettings.json
+**/.pbi/user.config
 **/.pbi/cache.abf
+
+# Ignorar los datos importados (el modelo cargado en memoria)
+# Esto evita que Git intente subir los datos reales, solo sube la estructura
+**/Model.bim
+
+# Ignorar archivos binarios pesados
+*.pbix
+*.pbit
+
+# Archivos temporales de Windows/VS Code
+.DS_Store
+.vscode/
