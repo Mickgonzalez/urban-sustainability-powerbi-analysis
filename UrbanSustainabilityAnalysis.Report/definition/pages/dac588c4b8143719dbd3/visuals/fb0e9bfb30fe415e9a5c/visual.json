@@ -96,5 +96,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6682168756d7f6e813d1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Video_HTML_mp4"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -11,6 +11,8 @@ table _Measures
 			-- Iconos SVG
 			VAR Icon_Exec = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M14%202H6c-1.1%200-1.99.9-1.99%202L4%2020c0%201.1.89%202%201.99%202H18c1.1%200%202-.9%202-2V8l-6-6zm2%2016H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5%209H13z%22/%3E%3C/svg%3E"
 			VAR Icon_Perf = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M15%2011V5l-3-3-3%203v2H3v14h18V11h-6zm-8%208H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6%208h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6%2012h-2v-2h2v2zm0-4h-2v-2h2v2z%22/%3E%3C/svg%3E"
+			VAR Icon_Rank = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M19%205h-2V3H7v2H5c-1.1%200-2%20.9-2%202v1c0%202.55%201.92%204.63%204.39%204.94.63%201.5%201.98%202.63%203.61%202.96V19H7v2h10v-2h-4v-3.1c1.63-.33%202.98-1.46%203.61-2.96C19.08%2012.63%2021%2010.55%2021%208V7c0-1.1-.9-2-2-2zM5%208V7h2v3.82C5.84%2010.4%205%209.3%205%208zm14%200c0%201.3-.84%202.4-2%202.82V7h2v1z%22/%3E%3C/svg%3E"
+			VAR Icon_Temp = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M11.99%202C6.47%202%202%206.48%202%2012s4.47%2010%209.99%2010C17.52%2022%2022%2017.52%2022%2012S17.52%202%2011.99%202zM12%2020c-4.42%200-8-3.58-8-8s3.58-8%208-8%208%203.58%208%208-3.58%208-8%208zm.5-13H11v6l5.25%203.15.75-1.23-4.5-2.67z%22/%3E%3C/svg%3E"
 			
 			RETURN
 			"<div style='position:relative; width:100%; height:100%; overflow:hidden; background:#041628; font-family: Segoe UI, Arial, sans-serif;'>
@@ -27,14 +29,16 @@ table _Measures
 			                opacity:0; animation: textFadeUp 1.5s ease-out forwards; animation-delay: 5s; z-index:3; width:100%;'>
 			        <div style='font-size:12px; font-weight:500; letter-spacing:4px; opacity:0.6; text-transform:uppercase; margin-bottom:10px;'>Michael Gonzalez Presents</div>
 			        <div style='font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:10px;'>Data Portfolio 2026</div>
-			        <div style='font-size:18px; font-weight:300; opacity:0.8;'>Visualizando el futuro de los negocios a través de datos</div>
+			        <div style='font-size:18px; font-weight:300; opacity:0.8;'>Sustainability of Cities</div>
 			    </div>
 			
 			    <div style='position:absolute; bottom:0; left:0; width:100%; height:100px; background: rgba(4,22,40,0.9); 
 			                opacity:0; animation: bottomFadeIn 1.2s ease-out forwards; animation-delay: 6s; z-index:4; 
 			                display:flex; align-items:center; justify-content:center; gap:20px; border-top:1px solid rgba(255,255,255,0.1);'>
-			        <div class='nav-btn'><img src='" & Icon_Exec & "' style='width:16px; opacity:0.7;' /> RESUMEN</div>
-			        <div class='nav-btn'><img src='" & Icon_Perf & "' style='width:16px; opacity:0.7;' /> DESEMPEÑO</div>
+			        <div class='nav-btn'><img src='" & Icon_Exec & "' class='btn-icon' /> Executive Summary</div>
+			        <div class='nav-btn'><img src='" & Icon_Perf & "' class='btn-icon' /> Performance</div>
+			        <div class='nav-btn'><img src='" & Icon_Rank & "' class='btn-icon' /> Ranking</div>
+			        <div class='nav-btn'><img src='" & Icon_Temp & "' class='btn-icon' /> Temporal Analysis</div>
 			    </div>
 			
 			    <img src='" & ImgURL_Logo & "' 
@@ -44,8 +48,7 @@ table _Measures
 			    <a href='" & LinkLinkedIn & "' target='_blank' 
 			        style='position:absolute; top:85px; right:35px; z-index:20; text-decoration:none;
 			               opacity:0; animation: logoFadeIn 2s ease forwards; animation-delay: 1.5s;'>
-			        <div style='display:flex; align-items:center; background: linear-gradient(180deg, #005b8f 0%, #004166 100%); 
-			                    padding: 4px 12px; border-radius: 4px; color: white; font-weight: 600; font-size: 11px;'>
+			        <div class='linkedin-btn'>
 			            <span style='margin-right: 8px;'>in</span> CONNECT LINKEDIN >
 			        </div>
 			    </a>
@@ -58,10 +61,43 @@ table _Measures
 			    </video>
 			
 			    <style>
-			        .nav-btn { padding:10px 20px; display:flex; align-items:center; gap:10px; border-radius:6px; 
-			                   background: rgba(255,255,255,0.05); color:white; font-size:12px; cursor:pointer; 
-			                   border:1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+			        /* ESTILO BASE BOTONES */
+			        .nav-btn { 
+			            padding:10px 20px; display:flex; align-items:center; gap:10px; border-radius:6px; 
+			            background: rgba(255,255,255,0.05); color:white; font-size:12px; cursor:pointer; 
+			            border:1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; 
+			        }
 			        
+			        .btn-icon { width:16px; opacity:0.7; transition: 0.3s; }
+			
+			        /* EFECTO HOVER (ILUMINACIÓN) */
+			        .nav-btn:hover { 
+			            background: rgba(0, 170, 255, 0.15); 
+			            border-color: rgba(0, 170, 255, 0.5); 
+			            color: #4dfed8; 
+			            transform: translateY(-3px); 
+			            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
+			        }
+			
+			        .nav-btn:hover .btn-icon { 
+			            opacity: 1;
+			            filter: drop-shadow(0 0 5px rgba(77, 254, 216, 0.8));
+			        }
+			
+			        /* ESTILO BOTÓN LINKEDIN */
+			        .linkedin-btn {
+			            display:flex; align-items:center; 
+			            background: linear-gradient(180deg, #005b8f 0%, #004166 100%); 
+			            padding: 6px 14px; border-radius: 4px; color: white; 
+			            font-weight: 600; font-size: 11px; transition: 0.3s;
+			            border: 1px solid rgba(255,255,255,0.1);
+			        }
+			        .linkedin-btn:hover {
+			            filter: brightness(1.2);
+			            transform: scale(1.05);
+			        }
+			        
+			        /* ANIMACIONES */
 			        @keyframes overlayFadeIn { from { opacity: 0; } to { opacity: 1; } }
 			        @keyframes textFadeUp { from { opacity: 0; transform: translate(-50%, -40%); } to { opacity: 1; transform: translate(-50%, -50%); } }
 			        @keyframes bottomFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -71,77 +107,6 @@ table _Measures
 			</div>"
 			```
 		lineageTag: 18b4efbc-7d61-4e46-af96-6b072119d282
-
-	measure Video_HTML_mp42 = ```
-			
-			VAR VideoURL_Main = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/215598.mp4"
-			VAR ImgURL_Logo = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/MGV4.png"
-			VAR VideoURL_Sig  = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/Sign%20Michael.mp4"
-			VAR LinkLinkedIn = "https://www.linkedin.com/in/michaelgonzalezv/"
-			
-			-- Iconos SVG para la Capa 4
-			VAR Icon_Exec = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M14%202H6c-1.1%200-1.99.9-1.99%202L4%2020c0%201.1.89%202%201.99%202H18c1.1%200%202-.9%202-2V8l-6-6zm2%2016H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5%209H13z%22/%3E%3C/svg%3E"
-			VAR Icon_Perf = "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M15%2011V5l-3-3-3%203v2H3v14h18V11h-6zm-8%208H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6%208h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6%2012h-2v-2h2v2zm0-4h-2v-2h2v2z%22/%3E%3C/svg%3E"
-			
-			RETURN
-			"<div style='position:relative; width:100%; height:100%; overflow:hidden; background:#041628; font-family: Segoe UI, Arial, sans-serif;'>
-			    
-			    <video src='" & VideoURL_Main & "' autoplay muted loop playsinline 
-			        style='width:100%; height:100%; object-fit:cover; z-index:1; filter: brightness(0.8);'>
-			    </video>
-			
-			    <div style='position:absolute; inset:0; background: linear-gradient(to bottom, rgba(4,22,40,0.7), rgba(4,22,40,0.95)); 
-			                opacity:0; animation: overlayFadeIn 2s ease-out forwards; animation-delay: 4s; z-index:2;'>
-			    </div>
-			
-			    <div style='position:absolute; top:45%; left:50%; transform:translate(-50%, -50%); text-align:center; color:white; 
-			                opacity:0; animation: textFadeUp 1.5s ease-out forwards; animation-delay: 5s; z-index:3; width:100%;'>
-			        <div style='font-size:12px; font-weight:500; letter-spacing:4px; opacity:0.6; text-transform:uppercase; margin-bottom:10px;'>Michael Gonzalez Presents</div>
-			        <div style='font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:10px;'>Data Portfolio 2026</div>
-			        <div style='font-size:18px; font-weight:300; opacity:0.8;'>Visualizando el futuro de los negocios a través de datos</div>
-			    </div>
-			
-			    <div style='position:absolute; bottom:0; left:0; width:100%; height:100px; background: rgba(4,22,40,0.9); 
-			                opacity:0; animation: bottomFadeIn 1.2s ease-out forwards; animation-delay: 6s; z-index:4; 
-			                display:flex; align-items:center; justify-content:center; gap:20px; border-top:1px solid rgba(255,255,255,0.1);'>
-			        <div class='nav-btn'><img src='" & Icon_Exec & "' style='width:16px; opacity:0.7;' /> RESUMEN</div>
-			        <div class='nav-btn'><img src='" & Icon_Perf & "' style='width:16px; opacity:0.7;' /> DESEMPEÑO</div>
-			    </div>
-			
-			    <img src='" & ImgURL_Logo & "' 
-			        style='position:absolute; top:35px; left:35px; width:100px; height:auto; z-index:10; 
-			               opacity:0; animation: logoFadeIn 2s ease forwards; animation-delay: 1s;' />
-			
-			    <a href='" & LinkLinkedIn & "' target='_blank' 
-			        style='position:absolute; top:85px; right:35px; z-index:20; text-decoration:none;
-			               opacity:0; animation: logoFadeIn 2s ease forwards; animation-delay: 1.5s;'>
-			        <div style='display:flex; align-items:center; background: linear-gradient(180deg, #005b8f 0%, #004166 100%); 
-			                    padding: 6px 14px; border-radius: 4px; color: white; font-weight: 600; font-size: 11px; letter-spacing: 0.8px;'>
-			            <span style='margin-right: 8px;'>in</span> CONNECT LINKEDIN >
-			        </div>
-			    </a>
-			
-			    <video src='" & VideoURL_Sig & "' autoplay muted playsinline 
-			        style='position:absolute; bottom:20px; right:20px; width:350px; height:auto; z-index:15; 
-			               mix-blend-mode: screen; opacity:0; pointer-events: none;
-			               animation: signatureShow 6s ease forwards; animation-delay: 2s;'>
-			    </video>
-			
-			    <style>
-			        .nav-btn { padding:10px 20px; display:flex; align-items:center; gap:10px; border-radius:6px; 
-			                   background: rgba(255,255,255,0.05); color:white; font-size:12px; cursor:pointer; 
-			                   border:1px solid rgba(255,255,255,0.1); transition: 0.3s; }
-			        .nav-btn:hover { background: rgba(0,170,255,0.15); transform: translateY(-2px); }
-			
-			        @keyframes overlayFadeIn { from { opacity: 0; } to { opacity: 1; } }
-			        @keyframes textFadeUp { from { opacity: 0; transform: translate(-50%, -40%); } to { opacity: 1; transform: translate(-50%, -50%); } }
-			        @keyframes bottomFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-			        @keyframes logoFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-			        @keyframes signatureShow { 0% { opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
-			    </style>
-			</div>"
-			```
-		lineageTag: 48244d62-2535-4ea3-8014-e81b1982e561
 
 	column Column
 		formatString: 0
