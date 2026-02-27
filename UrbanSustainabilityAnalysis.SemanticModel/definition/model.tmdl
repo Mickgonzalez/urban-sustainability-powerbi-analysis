@@ -15,6 +15,9 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table 'City Lookup'
 ref table 'City Metrics'
 ref table _Measures
+ref table Parameter
+ref table 'City Slicer'
+ref table 'Page Parameter'
 
 ref cultureInfo en-US
 

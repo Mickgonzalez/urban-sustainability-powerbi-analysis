@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "bfd8b2c53424f076324a",
-  "displayName": "Executive Summary",
+  "name": "05b68c4c25cdc7849000",
+  "displayName": "Ranking",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
@@ -9,12 +9,19 @@
     "background": [
       {
         "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          },
           "image": {
             "image": {
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'background_1.jpg'"
+                    "Value": "'background_3.jpg'"
                   }
                 }
               },
@@ -23,48 +30,21 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "background_18585712378984418.jpg"
+                    "ItemName": "background_3766956257052211.jpg"
                   }
                 }
               },
               "scaling": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Fit'"
+                    "Value": "'Fill'"
                   }
                 }
-              }
-            }
-          },
-          "transparency": {
-            "expr": {
-              "Literal": {
-                "Value": "0D"
-              }
-            }
-          }
-        }
-      }
-    ],
-    "outspacePane": [
-      {
-        "properties": {
-          "width": {
-            "expr": {
-              "Literal": {
-                "Value": "200L"
               }
             }
           }
         }
       }
     ]
-  },
-  "visualInteractions": [
-    {
-      "source": "200c6d4db60c568561a7",
-      "target": "5e5565cf429743bde285",
-      "type": "NoFilter"
-    }
-  ]
+  }
 }

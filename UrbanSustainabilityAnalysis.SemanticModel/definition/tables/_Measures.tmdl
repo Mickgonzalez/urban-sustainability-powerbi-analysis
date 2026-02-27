@@ -3,9 +3,9 @@ table _Measures
 
 	measure Video_HTML_mp4 = ```
 			
-			VAR VideoURL_Main = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/215598.mp4"
-			VAR ImgURL_Logo = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/MGV4.png"
-			VAR VideoURL_Sig  = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/Sign%20Michael.mp4"
+			VAR VideoURL_Main = "https://raw.githubusercontent.com/Mickgonzalez/portfolio-assets/main/video/215598.mp4"
+			VAR ImgURL_Logo = "https://raw.githubusercontent.com/Mickgonzalez/portfolio-assets/main/video/MGV4.png"
+			VAR VideoURL_Sig  = "https://raw.githubusercontent.com/Mickgonzalez/portfolio-assets/main/video/Sign%20Michael.mp4"
 			VAR LinkLinkedIn = "https://www.linkedin.com/in/michaelgonzalezv/"
 			
 			-- Iconos SVG
@@ -28,17 +28,26 @@ table _Measures
 			    <div style='position:absolute; top:45%; left:50%; transform:translate(-50%, -50%); text-align:center; color:white; 
 			                opacity:0; animation: textFadeUp 1.5s ease-out forwards; animation-delay: 5s; z-index:3; width:100%;'>
 			        <div style='font-size:12px; font-weight:500; letter-spacing:4px; opacity:0.6; text-transform:uppercase; margin-bottom:10px;'>Michael Gonzalez Presents</div>
-			        <div style='font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:10px;'>Data Portfolio 2026</div>
+			        <div style='font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:10px;'>Urban Environmental Performance</div>
 			        <div style='font-size:18px; font-weight:300; opacity:0.8;'>Sustainability of Cities</div>
 			    </div>
 			
-			    <div style='position:absolute; bottom:0; left:0; width:100%; height:100px; background: rgba(4,22,40,0.9); 
+			    <div style='position:absolute; bottom:0; left:0; width:100%; padding-bottom:20px;
 			                opacity:0; animation: bottomFadeIn 1.2s ease-out forwards; animation-delay: 6s; z-index:4; 
-			                display:flex; align-items:center; justify-content:center; gap:20px; border-top:1px solid rgba(255,255,255,0.1);'>
-			        <div class='nav-btn'><img src='" & Icon_Exec & "' class='btn-icon' /> Executive Summary</div>
-			        <div class='nav-btn'><img src='" & Icon_Perf & "' class='btn-icon' /> Performance</div>
-			        <div class='nav-btn'><img src='" & Icon_Rank & "' class='btn-icon' /> Ranking</div>
-			        <div class='nav-btn'><img src='" & Icon_Temp & "' class='btn-icon' /> Temporal Analysis</div>
+			                display:flex; flex-direction:column; align-items:center;'>
+			        
+			        <div style='color:rgba(255,255,255,0.5); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom: 12px;'>
+			            Select an area to explore
+			        </div>
+			
+			        <div style='width: 80%; height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 20px;'></div>
+			
+			        <div style='display:flex; gap:20px; justify-content:center; align-items:center;'>
+			            <div class='nav-btn'><img src='" & Icon_Exec & "' class='btn-icon' /> Executive Summary</div>
+			            <div class='nav-btn'><img src='" & Icon_Perf & "' class='btn-icon' /> Performance</div>
+			            <div class='nav-btn'><img src='" & Icon_Rank & "' class='btn-icon' /> Ranking</div>
+			            <div class='nav-btn'><img src='" & Icon_Temp & "' class='btn-icon' /> Temporal Analysis</div>
+			        </div>
 			    </div>
 			
 			    <img src='" & ImgURL_Logo & "' 
@@ -61,16 +70,12 @@ table _Measures
 			    </video>
 			
 			    <style>
-			        /* ESTILO BASE BOTONES */
 			        .nav-btn { 
 			            padding:10px 20px; display:flex; align-items:center; gap:10px; border-radius:6px; 
 			            background: rgba(255,255,255,0.05); color:white; font-size:12px; cursor:pointer; 
 			            border:1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; 
 			        }
-			        
 			        .btn-icon { width:16px; opacity:0.7; transition: 0.3s; }
-			
-			        /* EFECTO HOVER (ILUMINACIÓN) */
 			        .nav-btn:hover { 
 			            background: rgba(0, 170, 255, 0.15); 
 			            border-color: rgba(0, 170, 255, 0.5); 
@@ -78,26 +83,14 @@ table _Measures
 			            transform: translateY(-3px); 
 			            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
 			        }
-			
-			        .nav-btn:hover .btn-icon { 
-			            opacity: 1;
-			            filter: drop-shadow(0 0 5px rgba(77, 254, 216, 0.8));
-			        }
-			
-			        /* ESTILO BOTÓN LINKEDIN */
+			        .nav-btn:hover .btn-icon { opacity: 1; filter: drop-shadow(0 0 5px rgba(77, 254, 216, 0.8)); }
 			        .linkedin-btn {
-			            display:flex; align-items:center; 
-			            background: linear-gradient(180deg, #005b8f 0%, #004166 100%); 
-			            padding: 6px 14px; border-radius: 4px; color: white; 
-			            font-weight: 600; font-size: 11px; transition: 0.3s;
+			            display:flex; align-items:center; background: linear-gradient(180deg, #005b8f 0%, #004166 100%); 
+			            padding: 6px 14px; border-radius: 4px; color: white; font-weight: 600; font-size: 11px; transition: 0.3s;
 			            border: 1px solid rgba(255,255,255,0.1);
 			        }
-			        .linkedin-btn:hover {
-			            filter: brightness(1.2);
-			            transform: scale(1.05);
-			        }
+			        .linkedin-btn:hover { filter: brightness(1.2); transform: scale(1.05); }
 			        
-			        /* ANIMACIONES */
 			        @keyframes overlayFadeIn { from { opacity: 0; } to { opacity: 1; } }
 			        @keyframes textFadeUp { from { opacity: 0; transform: translate(-50%, -40%); } to { opacity: 1; transform: translate(-50%, -50%); } }
 			        @keyframes bottomFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -107,6 +100,1791 @@ table _Measures
 			</div>"
 			```
 		lineageTag: 18b4efbc-7d61-4e46-af96-6b072119d282
+
+	measure Fondo_Estatico_Pag2 = ```
+			
+			VAR ImgURL_Fondo = "https://tkwucpkqeddoihbfcywm.supabase.co/storage/v1/object/public/video/MGV4.png" 
+			
+			RETURN
+			"
+			<div style='position:relative; width:100%; height:100%; overflow:hidden; background:#041628;'>
+			    
+			    <div style='
+			        position:absolute; 
+			        inset:0; 
+			        background-image: url(""" & ImgURL_Fondo & """); 
+			        background-size: cover; 
+			        background-position: center; 
+			        filter: brightness(0.4) blur(8px); /* Oscurece y desenfoca para resaltar datos */
+			        z-index: 1;
+			        transform: scale(1.1); /* Evita bordes blancos por el blur */
+			    '></div>
+			
+			    <div style='
+			        position:absolute; 
+			        inset:0; 
+			        background: radial-gradient(circle at center, rgba(4,22,40,0.2) 0%, rgba(4,22,40,0.8) 100%);
+			        z-index: 2;
+			    '></div>
+			
+			    <div style='
+			        position:absolute; 
+			        inset:20px; 
+			        border: 1px solid rgba(255,255,255,0.05); 
+			        z-index: 3; 
+			        pointer-events: none;
+			    '></div>
+			
+			</div>
+			"
+			```
+		lineageTag: 7ec08ea6-7832-4c1d-bb30-941e8db1b2f1
+
+	measure 'Avg Livability Score' = AVERAGE('City Metrics'[LivabilityComposite])
+		lineageTag: 70696d4b-2a36-46e4-b20b-be816c691bbc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Transit Score' = AVERAGE('City Metrics'[TransitScore])
+		lineageTag: 8716aab9-4add-4014-aba1-88aabd70b9bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Housing Affordability' = AVERAGE('City Metrics'[HousingAffordabilityIndex])
+		lineageTag: 73429c5b-d696-4de4-a081-739ad7df3bd2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Green Space' = AVERAGE('City Metrics'[GreenSpacePct])
+		lineageTag: 019f306e-97da-41dd-9236-411467b1c714
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Emissions' = AVERAGE('City Metrics'[EmissionsIndex])
+		lineageTag: 8a3ec050-3fd3-4971-a58a-1685b0ab8dc0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Field Parameter - Icon URL' = ```
+			
+			
+			// Free to use, no attribution required in most cases
+			
+			VAR _livability_photo = "https://jjkpkhxeiwvpmywqvhgo.supabase.co/storage/v1/object/public/public-assets/Power%20BI%20World%20Champs%2026%20Assets/modern-city-skyline-silhouette-at-blue-h_Z23tigWaTPO7I6PBrwkYbQ_we3aANIpQ8a28C-QnABc7w.png"
+			
+			
+			VAR _housing_photo = "https://jjkpkhxeiwvpmywqvhgo.supabase.co/storage/v1/object/public/public-assets/Power%20BI%20World%20Champs%2026%20Assets/residential-neighborhood-rooftops-at-blu_eXM-ycaRT4KKaD2IDK-7Dw_h8H49YvORbuobMkqHV41zw.png"
+			
+			
+			VAR _transit_photo = "https://jjkpkhxeiwvpmywqvhgo.supabase.co/storage/v1/object/public/public-assets/Power%20BI%20World%20Champs%2026%20Assets/modern-transit-bus-or-train-in-twilight-_YMQ8Ij3lQmumNxU5nE_xrg_NpO_hW1sQ96OBRMxGFGvHw.png"
+			
+			
+			VAR _greenspace_photo = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80"
+			
+			
+			VAR _emissions_photo = "https://jjkpkhxeiwvpmywqvhgo.supabase.co/storage/v1/object/public/public-assets/Power%20BI%20World%20Champs%2026%20Assets/industrial-smokestacks-with-soft-steam-a_t1wezITGQySc6L6vXGhRQg_yuwFaQ5zQoOmLVd9OYNw_g.png"
+			
+			
+			RETURN
+			SWITCH(
+			    SELECTEDVALUE('Parameter'[Parameter Order]),
+			    0, _livability_photo,
+			    1, _housing_photo,
+			    2, _transit_photo,
+			    3, _greenspace_photo,
+			    4, _emissions_photo,
+			    BLANK()
+			)
+			
+			/* ICONIFY CDN VERSION - COMMENTED FOR FUTURE USE
+			VAR _livability_img = "https://api.iconify.design/mdi/star-circle.svg?color=%23FFB338&width=64&height=64"
+			VAR _housing_img = "https://api.iconify.design/mdi/home-circle.svg?color=%232196F3&width=64&height=64"
+			VAR _transit_img = "https://api.iconify.design/mdi/train.svg?color=%234CAF50&width=64&height=64"
+			VAR _greenspace_img = "https://api.iconify.design/mdi/tree.svg?color=%2366BB6A&width=64&height=64"
+			VAR _emissions_img = "https://api.iconify.design/mdi/factory.svg?color=%23FF5722&width=64&height=64"
+			*/
+			
+			/* INLINE SVG VERSION - ALSO AVAILABLE
+			VAR _livability = "data:image/svg+xml;utf8,<svg width='100' height='100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 L15.09 8.26 L22 9.27 L17 14.14 L18.18 21 L12 17.77 L5.82 21 L7 14.14 L2 9.27 L8.91 8.26 Z' fill='%23FFB338' stroke='%23FF9800' stroke-width='0.5' stroke-linejoin='round'/></svg>"
+			*/
+			
+			```
+		lineageTag: eee2a3a0-ddac-4c30-8231-ec0d66a276c9
+
+	measure 'Field Parameter - Description Short' = ```
+			
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			
+			VAR ShortDesc = 
+			    SWITCH(
+			        MetricOrder,
+			        0, "Overall city quality score across multiple dimensions",
+			        1, "Housing cost affordability relative to local income",
+			        2, "Public transportation accessibility and quality",
+			        3, "City area dedicated to parks and green spaces",
+			        4, "Air pollution and carbon emissions levels",
+			        "Select a metric"
+			    )
+			
+			RETURN
+			ShortDesc
+			
+			```
+		lineageTag: 94620dbc-aea8-4673-972f-d1605f44599b
+
+	measure 'Selected Metric' = ```
+			
+			SWITCH(
+			    SELECTEDVALUE('Parameter'[Parameter Order]),
+			    0, [Avg Livability Score],
+			    1, [Avg Housing Affordability],
+			    2, [Avg Transit Score],
+			    3, [Avg Green Space],
+			    4, [Avg Emissions],
+			    BLANK()
+			)
+			
+			```
+		lineageTag: cafc5b60-a1a6-461a-998e-2f7ee2e8bc46
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Selected City Metric' = ```
+			
+			[Selected Metric]
+			
+			```
+		lineageTag: cda0bd2b-7adf-441d-b905-9ce35d2015a3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Header - Main Title' = ```
+			
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			
+			VAR Title = 
+			    SWITCH(
+			        MetricOrder,
+			        0, "Livability Index Analysis",
+			        1, "Housing Affordability Analysis",
+			        2, "Transit Quality Analysis",
+			        3, "Green Space Analysis",
+			        4, "Emissions Analysis",
+			        "Select a Metric Below to Begin"
+			    )
+			
+			RETURN
+			Title
+			
+			```
+		lineageTag: d95d99b7-9321-4b00-931e-fdd13f080aa8
+
+	measure 'Header - Subtitle II' = ```
+			
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			
+			VAR Subtitle = 
+			    SWITCH(
+			        MetricOrder,
+			        0, "Metric Selected: Livability Index - Composite score measuring overall city quality across housing, transit, environment, and emissions. Higher scores indicate better livability.",
+			        1, "Metric Selected: Housing Affordability - Index measuring housing costs relative to income. Higher values indicate more affordable housing options for residents.",
+			        2, "Metric Selected: Transit Quality - Score evaluating public transportation accessibility and quality. Higher scores reflect better transit infrastructure and connectivity.",
+			        3, "Metric Selected: Green Space - Percentage of city area dedicated to parks and natural spaces. Higher values indicate more green space available per capita.",
+			        4, "Metric Selected: Emissions - Index measuring air pollution and carbon emissions. Lower values indicate cleaner air and better environmental quality.",
+			        "Choose from the metrics below to explore city performance trends and insights"
+			    )
+			
+			RETURN
+			Subtitle
+			```
+		lineageTag: 9a882dc2-5326-4eb3-b974-3db0940c4c61
+
+	measure 'Page 1 - Header - Title and Context' = ```
+			VAR SelectedCity = SELECTEDVALUE('City Lookup'[City], "All Cities")
+			VAR SelectedMetricOrder = SELECTEDVALUE('Parameter'[Parameter Order], 0)
+			VAR SelectedMetric = 
+			    SWITCH(
+			        SelectedMetricOrder,
+			        0, "Livability Index",
+			        1, "Housing Affordability",
+			        2, "Transit Quality",
+			        3, "Green Space",
+			        4, "Emissions",
+			        "Livability Index"
+			    )
+			VAR SelectedYear = SELECTEDVALUE('City Metrics'[Year], YEAR(TODAY()))
+			
+			RETURN
+			"<div style='
+			    font-family: Segoe UI, sans-serif;
+			    padding: 0px;
+			    line-height: 1;
+			'>
+			    <div style='
+			        font-size: 22px;
+			        font-weight: 600;
+			        color: #0A1628;
+			        margin-bottom: 8px;
+			    '>Executive Summary</div>
+			    <div style='
+			        font-size: 12px;
+			        color: #64748B;
+			        font-weight: 400;
+			    '>
+			        <span style='color: #64748B;'>City:</span> 
+			        <span style='font-weight: 600; color: #0A1628;'>" & SelectedCity & "</span>
+			        <span style='margin: 0 8px; color: #CBD5E1;'>•</span>
+			        <span style='color: #64748B;'>Metric:</span> 
+			        <span style='font-weight: 600; color: #0066CC;'>" & SelectedMetric & "</span>
+			        <span style='margin: 0 8px; color: #CBD5E1;'>•</span>
+			        <span style='color: #64748B;'>Year:</span> 
+			        <span style='font-weight: 600; color: #0A1628;'>" & SelectedYear & "</span>
+			    </div>
+			</div>"
+			```
+		lineageTag: 3c287dbe-0093-4fc3-baed-27c3fc5bb1ec
+
+	measure 'All Cities Benchmark' = ```
+			
+			CALCULATE(
+			    [Selected Metric],
+			    ALL('City Lookup'[City])
+			)
+			
+			```
+		lineageTag: 596ab0b6-9e99-430c-9be9-e115d0da6999
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'All Cities Avg Livability' =
+			
+			CALCULATE(
+			    [Avg Livability Score],
+			    ALL('City Lookup'[City])
+			)
+		lineageTag: 3b79fe16-6e3f-47e2-abd2-84aa7165dc27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Page 1 - Card - Livability HTML' = ```
+			
+			"<div style='font-family:system-ui,sans-serif; background:white; border-radius:10px; position:absolute; inset:0; overflow:hidden; ms-overflow-style:none; scrollbar-width:none;'> " &
+			  "<style> " &
+			    "/* Blindaje contra scrollbars */ " &
+			    "html, body { margin:0 !important; padding:0 !important; overflow:hidden !important; height:100%; width:100%; } " &
+			    "::-webkit-scrollbar { display:none !important; width:0; background:transparent; } " &
+			    
+			    "/* Contenedor principal con padding interno */ " &
+			    ".card-container { position:relative; width:100%; height:100%; overflow:hidden; padding:12px 14px; box-sizing:border-box; cursor:pointer; } " &
+			    
+			    "/* Animacion de subida */ " &
+			    ".card-content { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); height:100%; width:100%; display:flex; flex-direction:column; } " &
+			    ".card-container:hover .card-content { transform: translateY(-100%); } " &
+			    
+			    "/* Capa de informacion trasera (Quick Guide) */ " &
+			    ".tooltip-overlay { " &
+			        "position: absolute; top: 100%; left: 0; width: 100%; height: 100%; " &
+			        "background: #0066CC; color: white; padding: 14px; " &
+			        "transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); " &
+			        "display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; " &
+			    "} " &
+			    ".card-container:hover .tooltip-overlay { transform: translateY(-100%); } " &
+			  "</style> " &
+			
+			  "<div class='card-container'> " &
+			    
+			    "" &
+			    "<div class='card-content'> " &
+			      "<div style='margin-bottom:8px'> " &
+			        "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#0066CC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'> " &
+			          "<path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path> " &
+			          "<circle cx='9' cy='7' r='4'></circle> " &
+			          "<path d='M23 21v-2a4 4 0 0 0-3-3.87'></path> " &
+			          "<path d='M16 3.13a4 4 0 0 1 0 7.75'></path> " &
+			        "</svg> " &
+			      "</div> " &
+			      
+			      "<div style='font-size:25px; font-weight:700; color:#1a1a1a; line-height:1; margin-bottom:3px'> " & 
+			        FORMAT([Avg Livability Score], "0.0") & 
+			      "</div> " &
+			      
+			      "<div style='font-size:11px; font-weight:500; color:#666666; margin-bottom:10px'>Avg Livability Score</div> " &
+			      
+			      "<div style='padding-top:8px; border-top:1px solid #f0f0f0'> " &
+			        "<div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:6px'> " &
+			          "<div style='font-size:9px; font-weight:600; color:#999999; text-transform:uppercase;'>All Cities Avg</div> " &
+			          "<div style='font-size:13px; font-weight:600; color:#333333'>" & FORMAT([All Cities Avg Livability], "0.0") & "</div> " &
+			        "</div> " &
+			        "<div style='display:flex; justify-content:space-between; align-items:center'> " &
+			          "<div style='font-size:9px; font-weight:600; color:#999999; text-transform:uppercase;'>Gap</div> " &
+			          "<div style='font-size:13px; font-weight:700;" & IF([Gap Absolute] >= 0, "color:#0066CC", "color:#C75B5B") & "'>" & [Gap with Sign] & "</div> " &
+			        "</div> " &
+			      "</div> " &
+			    "</div> " &
+			
+			    "" &
+			    "<div class='tooltip-overlay'> " &
+			      "<div style='font-size:12px; font-weight:700; margin-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.3); padding-bottom:4px;'>Quick Guide</div> " &
+			      "<p style='font-size:10px; line-height:1.4; margin:0; font-weight:400;'> " &
+			        "This score represents the overall <strong>quality of life</strong>. It combines safety, healthcare, and culture." &
+			      "</p> " &
+			      "<div style='margin-top:10px;'> " &
+			        "<div style='font-size:9px; opacity:0.9;'><strong>Benchmark:</strong> The typical score across all monitored cities.</div> " &
+			        "<div style='font-size:9px; opacity:0.9; margin-top:4px;'><strong>Gap:</strong> How much this city is performing above or below that average.</div> " &
+			      "</div> " &
+			    "</div> " &
+			
+			  "</div> " &
+			"</div>"
+			```
+		lineageTag: 4764f953-766a-48da-8326-c8474a2b3156
+
+	measure 'Gap Absolute' =
+			
+			[Avg Livability Score] - [All Cities Avg Livability]
+		lineageTag: d85664c9-df9b-4a3b-8174-d04ad304a082
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gap with Sign' = ```
+			
+			VAR Gap = [Gap Absolute]
+			VAR Sign = IF(Gap >= 0, "+", "")
+			RETURN
+			Sign & FORMAT(Gap, "0.0")
+			
+			```
+		lineageTag: c28a0cb2-540c-41a6-bfc0-3dee6664eb74
+
+	measure 'Page 1 - Card - Rank HTML' = ```
+			
+			"<div style='font-family:system-ui,sans-serif; background:white; border-radius:10px; position:absolute; inset:0; overflow:hidden; ms-overflow-style:none; scrollbar-width:none;'> " &
+			  "<style> " &
+			    "html, body { margin:0 !important; padding:0 !important; overflow:hidden !important; height:100%; width:100%; } " &
+			    "::-webkit-scrollbar { display:none !important; width:0; } " &
+			    
+			    ".card-container-rank { position:relative; width:100%; height:100%; overflow:hidden; padding:12px 14px; box-sizing:border-box; cursor:pointer; } " &
+			    
+			    ".card-content-rank { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); height:100%; width:100%; display:flex; flex-direction:column; } " &
+			    ".card-container-rank:hover .card-content-rank { transform: translateY(-100%); } " &
+			    
+			    ".tooltip-overlay-rank { " &
+			        "position: absolute; top: 100%; left: 0; width: 100%; height: 100%; " &
+			        "background: #0066CC; color: white; padding: 14px; " &
+			        "transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); " &
+			        "display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; " &
+			    "} " &
+			    ".card-container-rank:hover .tooltip-overlay-rank { transform: translateY(-100%); } " &
+			  "</style> " &
+			
+			  "<div class='card-container-rank'> " &
+			    
+			    "" &
+			    "<div class='card-content-rank'> " &
+			      "<div style='margin-bottom:8px'> " &
+			        "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#0066CC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'> " &
+			          "<path d='M6 9H4.5a2.5 2.5 0 0 1 0-5H6'></path> " &
+			          "<path d='M18 9h1.5a2.5 2.5 0 0 0 0-5H18'></path> " &
+			          "<path d='M4 22h16'></path> " &
+			          "<path d='M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22'></path> " &
+			          "<path d='M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22'></path> " &
+			          "<path d='M18 2H6v7a6 6 0 0 0 12 0V2Z'></path> " &
+			        "</svg> " &
+			      "</div> " &
+			      
+			      "<div style='font-size:25px; font-weight:700; color:#1a1a1a; line-height:1; margin-bottom:3px'> " & 
+			        [Rank Display] & 
+			      "</div> " &
+			      
+			      "<div style='font-size:11px; font-weight:500; color:#666666; margin-bottom:10px'>City Rank</div> " &
+			      
+			      "<div style='padding-top:8px; border-top:1px solid #f0f0f0'> " &
+			        "<div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:6px'> " &
+			          "<div style='font-size:9px; font-weight:600; color:#999999; text-transform:uppercase;'>Rank Context</div> " &
+			          "<div style='font-size:13px; font-weight:600; color:#333333'>" & [Rank Context] & "</div> " &
+			        "</div> " &
+			        "<div style='display:flex; justify-content:space-between; align-items:center'> " &
+			          "<div style='font-size:9px; font-weight:600; color:#999999; text-transform:uppercase;'>Performance Tier</div> " &
+			          "<div style='font-size:13px; font-weight:700; color:#0066CC'>" & [Performance Tier] & "</div> " &
+			        "</div> " &
+			      "</div> " &
+			    "</div> " &
+			
+			    "" &
+			    "<div class='tooltip-overlay-rank'> " &
+			      "<div style='font-size:12px; font-weight:700; margin-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.3); padding-bottom:4px;'>Rank Insights</div> " &
+			      "<p style='font-size:10px; line-height:1.4; margin:0; font-weight:400;'> " &
+			        "This shows where the city stands compared to all others. A lower number means <strong>better performance</strong>." &
+			      "</p> " &
+			      "<div style='margin-top:10px;'> " &
+			        "<div style='font-size:9px; opacity:0.9;'><strong>Performance Tier:</strong> A classification from 'Elite' to 'Improving' based on percentile.</div> " &
+			        "<div style='font-size:9px; opacity:0.9; margin-top:4px;'><strong>Context:</strong> Total number of cities being compared in this metric.</div> " &
+			      "</div> " &
+			    "</div> " &
+			
+			  "</div> " &
+			"</div>"
+			```
+		lineageTag: 71de21cd-f690-4d8f-b045-6f6930fc65ba
+
+	measure 'Rank Display' = ```
+			
+			VAR RankValue = [City Rank]
+			RETURN
+			IF(
+			    NOT(ISBLANK(RankValue)),
+			    "#" & RankValue,
+			    BLANK()
+			)
+			
+			```
+		lineageTag: 5cd48449-e639-404b-b327-2e7e2c64170d
+
+	measure 'Rank Context' =
+			
+			VAR TotalCitiesGlobal = CALCULATE(COUNTROWS('City Lookup'), ALL('City Lookup'))
+			RETURN
+			"out of " & TotalCitiesGlobal & " cities"
+		lineageTag: ac4c914d-cce2-44cd-b005-6df6ed39585d
+
+	measure 'Performance Tier' = ```
+			
+			
+			VAR RankGlobal = 
+			    RANKX(
+			        ALL('City Lookup'[City]), 
+			        [Avg Livability Score], 
+			        , 
+			        DESC, 
+			        DENSE
+			    )
+			
+			
+			VAR TotalGlobal = CALCULATE(COUNTROWS('City Lookup'), ALL('City Lookup'[City]))
+			
+			
+			VAR Percentile = DIVIDE(RankGlobal, TotalGlobal)
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK([Avg Livability Score]), BLANK(),
+			    Percentile <= 0.33, "Upper Tier",
+			    Percentile <= 0.66, "Middle Tier",
+			    "Lower Tier"
+			)
+			
+			```
+		lineageTag: c9f610fc-278c-4d6a-ad8f-da1c1253e34c
+
+	measure 'City Rank' = ```
+			
+			VAR ScoreDaCidade = [Avg Livability Score]
+			RETURN
+			IF(
+			    ISBLANK(ScoreDaCidade), 
+			    BLANK(),
+			    RANKX(
+			        ALL('City Lookup'[City]), 
+			        [Avg Livability Score], 
+			        ScoreDaCidade, 
+			        DESC, 
+			        DENSE
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: 76be299b-7299-4e94-9df5-d9f89eda5546
+
+	measure 'Page 1 - Card - Strongest Dimension HTML' = ```
+			
+			VAR RawGapText = [Strongest Dimension Gap]
+			VAR GapValue = IFERROR(VALUE(PATHITEM(SUBSTITUTE(RawGapText, " ", "|"), 1)), 0)
+			VAR DimName = [Strongest Dimension Name]
+			VAR UniqueID = "strongest_card"
+			
+			VAR IsGood = 
+			    SWITCH(TRUE(),
+			        ISBLANK(RawGapText), 1,
+			        (DimName = "Housing Affordability" || DimName = "Emissions") && GapValue <= 0, 1,
+			        (DimName = "Housing Affordability" || DimName = "Emissions") && GapValue > 0, 0,
+			        GapValue >= 0, 1, 
+			        0
+			    )
+			VAR MainColor = IF(IsGood = 1, "#0066CC", "#C75B5B")
+			
+			VAR IconSVG = 
+			    SWITCH(TRUE(),
+			        DimName = "Transit Quality" || DimName = "Transit Score" || DimName = "Transit", 
+			            "<path d='M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2'></path>" &
+			            "<circle cx='7' cy='17' r='2'></circle>" &
+			            "<path d='M9 17h6'></path>" &
+			            "<circle cx='17' cy='17' r='2'></circle>",
+			        DimName = "Green Space",
+			            "<path d='M12 19V5M5 11l7-7 7 7M8 15l4-4 4 4M12 19h-1m1 0h1'></path>",
+			        DimName = "Emissions",
+			            "<path d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'></path>" &
+			            "<path d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'></path>",
+			        DimName = "Housing Affordability",
+			            "<path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'></path><polyline points='9 22 9 12 15 12 15 22'></polyline>",
+			        DimName = "Livability Index" || DimName = "Livability",
+			            "<path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path>" &
+			            "<circle cx='9' cy='7' r='4'></circle>" &
+			            "<path d='M23 21v-2a4 4 0 0 0-3-3.87'></path>" &
+			            "<path d='M16 3.13a4 4 0 0 1 0 7.75'></path>",
+			        "<path d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'></path>" &
+			        "<path d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'></path>"
+			    )
+			
+			VAR TooltipDescription = 
+			    SWITCH(DimName,
+			        "Housing Affordability", "This city offers highly competitive housing costs relative to the benchmark, attracting talent and residents.",
+			        "Emissions", "Leading the way in sustainability with lower-than-average emissions per capita.",
+			        "Transit Quality", "Superior public infrastructure. High connectivity scores provide a major competitive advantage.",
+			        "Livability Index", "Exceptional quality of life metrics. This city outperforms others in essential services and safety.",
+			        "Green Space", "Abundant access to parks and natural areas, significantly higher than the regional average.",
+			        "This is the city's top-performing category relative to the global benchmark."
+			    )
+			
+			RETURN
+			"<div style='font-family:system-ui,sans-serif; background:white; border-radius:10px; position:absolute; inset:0; overflow:hidden; ms-overflow-style:none; scrollbar-width:none;'> " &
+			  "<style> " &
+			    "html, body { margin:0 !important; padding:0 !important; overflow:hidden !important; height:100%; width:100%; } " &
+			    "::-webkit-scrollbar { display:none !important; width:0; } " &
+			    
+			    ".cont-str { position:relative; width:100%; height:100%; overflow:hidden; padding:12px 14px; box-sizing:border-box; cursor:pointer; } " &
+			    
+			    ".c-str { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); height:100%; width:100%; display:flex; flex-direction:column; } " &
+			    ".cont-str:hover .c-str { transform: translateY(-100%); } " &
+			    
+			    ".tt-str { " &
+			        "position: absolute; top: 100%; left: 0; width: 100%; height: 100%; " &
+			        "background: " & MainColor & "; color: white; padding: 14px; " &
+			        "transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); " &
+			        "display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; " &
+			    "} " &
+			    ".cont-str:hover .tt-str { transform: translateY(-100%); } " &
+			  "</style> " &
+			
+			  "<div class='cont-str'> " &
+			    
+			    "" &
+			    "<div class='c-str'> " &
+			      "<div style='margin-bottom:8px'> " &
+			        "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='" & MainColor & "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'> " &
+			          IconSVG &
+			        "</svg> " &
+			      "</div> " &
+			      
+			      "<div style='font-size:16px; font-weight:700; color:#1a1a1a; line-height:1.2; margin-bottom:8px'> " &
+			        IF(ISBLANK(DimName), "N/A", DimName) &
+			      "</div> " &
+			      
+			      "<div style='font-size:11px; font-weight:500; color:#666666; margin-bottom:10px'>Strongest Dimension</div> " &
+			      
+			      "<div style='padding-top:8px; border-top:1px solid #f0f0f0'> " &
+			        "<div style='display:flex; justify-content:space-between; align-items:center; margin-bottom:6px'> " &
+			          "<div style='font-size:9px; font-weight:600; color:#999999; text-transform:uppercase;'>Dimension Value</div> " &
+			          "<div style='font-size:13px; font-weight:600; color:#333333'>" & 
+			            IF(ISBLANK([Strongest Dimension Value]), "-", FORMAT([Strongest Dimension Value], "0.00")) & 
+			          "</div> " &
+			        "</div> " &
+			        
+			        "<div style='display:flex; justify-content:space-between; align-items:center'> " &
+			          "<div style='font-size:9px; font-weight:600; color:#999999; text-transform:uppercase;'>Gap vs Avg</div> " &
+			          "<div style='font-size:13px; font-weight:700; color:" & MainColor & "'>" & 
+			            IF(ISBLANK(RawGapText), "-", RawGapText) & 
+			          "</div> " &
+			        "</div> " &
+			      "</div> " &
+			    "</div> " &
+			
+			    "" &
+			    "<div class='tt-str'> " &
+			      "<div style='font-size:12px; font-weight:700; margin-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.3); padding-bottom:4px;'>" & DimName & "</div> " &
+			      "<p style='font-size:10px; line-height:1.4; margin:0; font-weight:400;'> " &
+			        TooltipDescription &
+			      "</p> " &
+			      "<div style='margin-top:10px; font-size:9px; opacity:0.85;'>This represents your most significant competitive advantage.</div> " &
+			    "</div> " &
+			
+			  "</div> " &
+			"</div>"
+			```
+		lineageTag: b31164f3-d56b-4a65-8a36-c6f963d4fed0
+
+	measure 'Strongest Dimension Gap' = ```
+			
+			VAR DimensionName = [Strongest Dimension Name]
+			VAR CurrentValue = [Strongest Dimension Value]
+			
+			VAR AvgValue = 
+			SWITCH(
+			    DimensionName,
+			    "Housing Affordability", CALCULATE([Avg Housing Affordability], ALL('City Lookup'[City])),
+			    "Transit Score", CALCULATE([Avg Transit Score], ALL('City Lookup'[City])),
+			    "Green Space", CALCULATE([Avg Green Space], ALL('City Lookup'[City])),
+			    "Emissions", CALCULATE([Avg Emissions], ALL('City Lookup'[City])),
+			    BLANK()
+			)
+			
+			VAR Gap = CurrentValue - AvgValue
+			VAR Sign = IF(Gap >= 0, "+", "")
+			
+			RETURN
+			Sign & FORMAT(Gap, "0.0") & " vs avg"
+			
+			```
+		lineageTag: a4aefd72-0382-450a-a2d3-1c8a23096133
+
+	measure 'Strongest Dimension Name' = ```
+			
+			VAR HousingScore = [Avg Housing Affordability]
+			VAR TransitScore = [Avg Transit Score]
+			VAR GreenScore = [Avg Green Space]
+			VAR EmissionsScore = [Avg Emissions]  
+			
+			VAR HousingAvg = CALCULATE([Avg Housing Affordability], ALL('City Lookup'[City]))
+			VAR TransitAvg = CALCULATE([Avg Transit Score], ALL('City Lookup'[City]))
+			VAR GreenAvg = CALCULATE([Avg Green Space], ALL('City Lookup'[City]))
+			VAR EmissionsAvg = CALCULATE([Avg Emissions], ALL('City Lookup'[City])) 
+			
+			
+			VAR HousingGapRaw = HousingScore - HousingAvg
+			VAR TransitGapRaw = TransitScore - TransitAvg
+			VAR GreenGapRaw = GreenScore - GreenAvg
+			VAR EmissionsGapRaw = EmissionsScore - EmissionsAvg
+			
+			
+			VAR HousingGap = HousingGapRaw * -1  
+			VAR TransitGap = TransitGapRaw       
+			VAR GreenGap = GreenGapRaw           
+			VAR EmissionsGap = EmissionsGapRaw * -1  
+			
+			VAR MaxGap = MAX(HousingGap, MAX(TransitGap, MAX(GreenGap, EmissionsGap)))
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    MaxGap = HousingGap, "Housing Affordability",
+			    MaxGap = TransitGap, "Transit Score",
+			    MaxGap = GreenGap, "Green Space",
+			    MaxGap = EmissionsGap, "Emissions",
+			    BLANK()
+			)
+			```
+		lineageTag: c282e038-6254-4fbc-9401-0f87da7a7a25
+
+	measure 'Strongest Dimension Value' = ```
+			
+			VAR DimensionName = [Strongest Dimension Name]
+			VAR RawValue = 
+			    SWITCH(
+			        DimensionName,
+			        "Housing Affordability", [Avg Housing Affordability],
+			        "Transit Score", [Avg Transit Score],
+			        "Green Space", [Avg Green Space],
+			        "Emissions", [Avg Emissions],
+			        BLANK()
+			    )
+			RETURN
+			ROUND(RawValue, 2)
+			```
+		lineageTag: cd37626f-29a2-4c65-a163-4ee2fffb4098
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Weakest Dimension Value' = ```
+			
+			VAR DimensionName = [Weakest Dimension Name]
+			RETURN
+			SWITCH(
+			    DimensionName,
+			    "Housing Affordability", [Avg Housing Affordability],
+			    "Transit Score", [Avg Transit Score],
+			    "Green Space", [Avg Green Space],
+			    "Emissions", [Avg Emissions],
+			    BLANK()
+			)
+			
+			```
+		lineageTag: e4e1debc-4eaf-4378-9500-8e43c8f8ac8f
+
+	measure 'Weakest Dimension Name' = ```
+			
+			VAR HousingScore = [Avg Housing Affordability]
+			VAR TransitScore = [Avg Transit Score]
+			VAR GreenScore = [Avg Green Space]
+			VAR EmissionsScore = [Avg Emissions]  
+			
+			VAR HousingAvg = CALCULATE([Avg Housing Affordability], ALL('City Lookup'[City]))
+			VAR TransitAvg = CALCULATE([Avg Transit Score], ALL('City Lookup'[City]))
+			VAR GreenAvg = CALCULATE([Avg Green Space], ALL('City Lookup'[City]))
+			VAR EmissionsAvg = CALCULATE([Avg Emissions], ALL('City Lookup'[City]))  
+			
+			VAR HousingGapRaw = HousingScore - HousingAvg
+			VAR TransitGapRaw = TransitScore - TransitAvg
+			VAR GreenGapRaw = GreenScore - GreenAvg
+			VAR EmissionsGapRaw = EmissionsScore - EmissionsAvg
+			
+			VAR HousingGap = HousingGapRaw * -1
+			VAR TransitGap = TransitGapRaw
+			VAR GreenGap = GreenGapRaw
+			VAR EmissionsGap = EmissionsGapRaw * -1
+			
+			VAR MinGap = MIN(HousingGap, MIN(TransitGap, MIN(GreenGap, EmissionsGap)))
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    MinGap = HousingGap, "Housing Affordability",
+			    MinGap = TransitGap, "Transit Score",
+			    MinGap = GreenGap, "Green Space",
+			    MinGap = EmissionsGap, "Emissions",
+			    BLANK()
+			)
+			
+			```
+		lineageTag: 7cc5ea09-df3f-4f24-9067-2d768324189c
+
+	measure 'Weakest Dimension Gap' = ```
+			
+			VAR DimensionName = [Weakest Dimension Name]
+			VAR CurrentValue = [Weakest Dimension Value]
+			
+			VAR AvgValue = 
+			SWITCH(
+			    DimensionName,
+			    "Housing Affordability", CALCULATE([Avg Housing Affordability], ALL('City Lookup'[City])),
+			    "Transit Score", CALCULATE([Avg Transit Score], ALL('City Lookup'[City])),
+			    "Green Space", CALCULATE([Avg Green Space], ALL('City Lookup'[City])),
+			    "Emissions", CALCULATE([Avg Emissions], ALL('City Lookup'[City])),
+			    BLANK()
+			)
+			
+			VAR Gap = CurrentValue - AvgValue
+			VAR Sign = IF(Gap >= 0, "+", "")
+			
+			RETURN
+			Sign & FORMAT(Gap, "0.0") & " vs avg"
+			
+			```
+		lineageTag: f9e0fb1d-c1c8-449b-b22e-8f74cb7cb44b
+
+	measure 'Page 1 - Card - Weakest Dimension HTML' = ```
+			
+			VAR RawGapText = [Weakest Dimension Gap]
+			VAR GapValue = IFERROR(VALUE(PATHITEM(SUBSTITUTE(RawGapText, " ", "|"), 1)), 0)
+			VAR DimName = [Weakest Dimension Name]
+			VAR UniqueID = "weakest_card"
+			
+			
+			VAR IsGood = 
+			    SWITCH(TRUE(),
+			        ISBLANK(RawGapText), 1,
+			        (DimName = "Housing Affordability" || DimName = "Emissions") && GapValue <= 0, 1,
+			        (DimName = "Housing Affordability" || DimName = "Emissions") && GapValue > 0, 0,
+			        GapValue >= 0, 1, 
+			        0
+			    )
+			VAR MainColor = IF(IsGood = 1, "#0066CC", "#C75B5B")
+			
+			
+			VAR IconSVG = 
+			    SWITCH(TRUE(),
+			        DimName = "Transit Quality" || DimName = "Transit Score" || DimName = "Transit", 
+			            "<path d='M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2'></path>" &
+			            "<circle cx='7' cy='17' r='2'></circle>" &
+			            "<path d='M9 17h6'></path>" &
+			            "<circle cx='17' cy='17' r='2'></circle>",
+			        
+			        DimName = "Green Space",
+			            "<path d='M12 19V5M5 11l7-7 7 7M8 15l4-4 4 4M12 19h-1m1 0h1'></path>",
+			        
+			        DimName = "Emissions",
+			            "<path d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'></path>" &
+			            "<path d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'></path>",
+			        
+			        DimName = "Housing Affordability",
+			            "<path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'></path><polyline points='9 22 9 12 15 12 15 22'></polyline>",
+			        
+			        DimName = "Livability Index" || DimName = "Livability",
+			            "<path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path>" &
+			            "<circle cx='9' cy='7' r='4'></circle>" &
+			            "<path d='M23 21v-2a4 4 0 0 0-3-3.87'></path>" &
+			            "<path d='M16 3.13a4 4 0 0 1 0 7.75'></path>",
+			        
+			     
+			        "<path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'></path><polyline points='9 22 9 12 15 12 15 22'></polyline>"
+			    )
+			
+			
+			VAR TooltipDescription = 
+			    SWITCH(DimName,
+			        "Housing Affordability", "High costs create a burden for residents. Lowering this index improves city accessibility.",
+			        "Emissions", "High pollution levels detected. Reducing greenhouse gases is critical for sustainability.",
+			        "Transit Quality", "Public transport availability is below average. Enhancing connectivity is a priority.",
+			        "Livability Index", "Overall quality of life metrics are lagging. Improvements in services are needed.",
+			        "Green Space", "Low access to parks and nature. Urban reforestation could boost this score.",
+			        "This is the area with the lowest relative performance compared to the city average."
+			    )
+			
+			RETURN
+			"<div style='font-family:system-ui,sans-serif;background:white;border-radius:10px;padding:12px 14px;position:relative;overflow:hidden;height:100%;cursor:pointer;'>" &
+			
+			  "<style>" &
+			   "body { overflow: hidden !important; }" &
+			    ".c-weak { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }" &
+			    ".cont-weak:hover .c-weak { transform: translateY(-100%); }" &
+			    ".tt-weak { " &
+			        "position: absolute; top: 100%; left: 0; width: 100%; height: 100%; " &
+			        "background: " & MainColor & "; color: white; padding: 14px; " &
+			        "transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); " &
+			        "display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;" &
+			    "}" &
+			    ".cont-weak:hover .tt-weak { transform: translateY(-100%); }" &
+			  "</style>" &
+			
+			  "<div class='cont-weak' style='position:relative;width:100%;height:100%;overflow:hidden;'>" &
+			    
+			    "" &
+			    "<div class='c-weak' style='height:100%;'>" &
+			      "<div style='margin-bottom:8px'>" &
+			        "<svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='" & MainColor & "' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>" &
+			          IconSVG &
+			        "</svg>" &
+			      "</div>" &
+			      
+			      "<div style='font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.2;margin-bottom:8px'>" &
+			        IF(ISBLANK(DimName), "N/A", DimName) &
+			      "</div>" &
+			      
+			      "<div style='font-size:11px;font-weight:500;color:#666666;margin-bottom:10px'>Weakest Dimension</div>" &
+			      
+			      "<div style='padding-top:8px;border-top:1px solid #f0f0f0'>" &
+			        "<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:6px'>" &
+			          "<div style='font-size:9px;font-weight:600;color:#999999;text-transform:uppercase;'>Dimension Value</div>" &
+			          "<div style='font-size:13px;font-weight:600;color:#333333'>" &
+			            IF(ISBLANK([Weakest Dimension Value]), "-", [Weakest Dimension Value]) &
+			          "</div>" &
+			        "</div>" &
+			        
+			        "<div style='display:flex;justify-content:space-between;align-items:center'>" &
+			          "<div style='font-size:9px;font-weight:600;color:#999999;text-transform:uppercase;'>Gap vs Avg</div>" &
+			          "<div style='font-size:13px;font-weight:700; color:" & MainColor & "'>" &
+			            IF(ISBLANK(RawGapText), "-", RawGapText) &
+			          "</div>" &
+			        "</div>" &
+			      "</div>" &
+			    "</div>" &
+			
+			    "" &
+			    "<div class='tt-weak'>" &
+			      "<div style='font-size:12px;font-weight:700;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:4px;'>" & DimName & "</div>" &
+			      "<p style='font-size:10px;line-height:1.4;margin:0;font-weight:400;'>" &
+			        TooltipDescription &
+			      "</p>" &
+			      "<div style='margin-top:10px; font-size:9px; opacity:0.85;'>Analysis based on " & FORMAT(GapValue/100, "0%") & " variance from global benchmark.</div>" &
+			    "</div>" &
+			
+			  "</div>" &
+			"</div>"
+			```
+		lineageTag: 2b5c18c8-3194-4bc1-9691-e9b71fa38fa6
+
+	measure 'Page 1 - Line Chart - HTML Header V2' = ```
+			
+			VAR CityName = SELECTEDVALUE('City Lookup'[City], "All Cities")
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			VAR MetricName = 
+			    SWITCH(
+			        MetricOrder,
+			        0, "Livability Index",
+			        1, "Housing Affordability",
+			        2, "Transit Quality",
+			        3, "Green Space",
+			        4, "Emissions"
+			    )
+			VAR TrendValue = [Analysis - Trend Direction]
+			VAR PctChange = [Analysis - Period Change %]
+			VAR YoYChange = [Analysis - YoY Change]
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			
+			
+			VAR IsNegativeBenefit = MetricOrder = 1 || MetricOrder = 4 
+			VAR IsPositiveBenefit = MetricOrder = 0 || MetricOrder = 2 || MetricOrder = 3
+			
+			VAR ColorPrimary = 
+			    SWITCH(TRUE(),
+			        IsPositiveBenefit && PctChange >= 0, "#0066CC",
+			        IsPositiveBenefit && PctChange < 0, "#C62828",
+			        IsNegativeBenefit && PctChange <= 0, "#0066CC",
+			        IsNegativeBenefit && PctChange > 0, "#C62828",
+			        "#0066CC"
+			    )
+			
+			VAR TrendIcon = 
+			    SWITCH(
+			        TRUE(),
+			        PctChange >= 0, 
+			            "<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='" & ColorPrimary & "' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align:-3px;margin-left:6px'><polyline points='23 6 13.5 15.5 8.5 10.5 1 18'/><polyline points='17 6 23 6 23 12'/></svg>",
+			        PctChange < 0, 
+			            "<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='" & ColorPrimary & "' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align:-3px;margin-left:6px'><polyline points='23 18 13.5 8.5 8.5 13.5 1 6'/><polyline points='17 18 23 18 23 12'/></svg>",
+			        ""
+			    )
+			
+			RETURN
+			"<style>
+			    @keyframes fadeInUp {
+			        from { opacity: 0; transform: translateY(8px); }
+			        to { opacity: 1; transform: translateY(0); }
+			    }
+			    .animate-fade { 
+			        animation: fadeInUp 0.8s ease-out forwards; 
+			    }
+			</style>
+			
+			<div class='animate-fade' style='font-family:system-ui,sans-serif;padding:8px 0;background:transparent;position:relative;line-height:1.2'>" &
+			  
+			  "<div style='display:inline-block;background:#0066CC;color:white;padding:3px 12px;border-radius:14px;font-size:11px;font-weight:600;margin-bottom:8px;box-shadow:0 2px 6px rgba(0,102,204,0.25)'>" & 
+			    CityName &
+			  "</div>" &
+			  
+			  "<div style='font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:6px;padding-right:250px;line-height:1.3'>" & 
+			    MetricName & " is " & TrendValue & TrendIcon &
+			  "</div>" &
+			  
+			  "<div style='font-size:17px;font-weight:700;margin-bottom:10px;padding-right:250px;line-height:1.3'>" &
+			    "<span style='color:" & ColorPrimary & ";display:inline-block'>" & FORMAT(PctChange, "+0.0%;-0.0%") & "</span> <span style='font-weight:500;color:#666666'>over 10 years</span>" &
+			  "</div>" &
+			  
+			  "<div style='font-size:11px;color:#666666;font-weight:400;line-height:1.4'>" & 
+			    "YoY (" & (CurrentYear - 1) & "–" & CurrentYear & "): <span style='font-weight:600;color:#333333'>" & FORMAT(YoYChange, "+0.0;-0.0") & " pts</span> • " &
+			    FORMAT([Analysis - Years Above Average], "0") & " of 10 years above avg" &
+			  "</div>" &
+			  
+			"</div>"
+			```
+		lineageTag: 1f320f93-eaa3-4062-94f4-4282947004a5
+
+	measure 'Analysis - Trend Direction' = ```
+			
+			VAR FirstYear = CALCULATE([Selected City Metric], 'City Metrics'[Year] = 2015)
+			VAR LastYear = CALCULATE([Selected City Metric], 'City Metrics'[Year] = 2024)
+			VAR Change = LastYear - FirstYear
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Change > 2, "improving",
+			    Change < -2, "declining",
+			    "stable"
+			)
+			
+			```
+		lineageTag: f72c35d5-c8ed-4833-85aa-82b15d31b425
+
+	measure 'Analysis - Period Change %' = ```
+			
+			VAR FirstYear = CALCULATE([Selected City Metric], 'City Metrics'[Year] = 2015)
+			VAR LastYear = CALCULATE([Selected City Metric], 'City Metrics'[Year] = 2024)
+			VAR Change = LastYear - FirstYear
+			VAR PctChange = DIVIDE(Change, FirstYear, 0)
+			
+			RETURN
+			PctChange
+			
+			```
+		lineageTag: 2e7b7a5a-d76a-4362-a7fb-894f8e999cc0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Analysis - YoY Change' = ```
+			
+			VAR MaxYear = MAX('City Metrics'[Year])
+			VAR PrevYear = MaxYear - 1
+			
+			VAR ValueCurrent = CALCULATE([Selected City Metric], 'City Metrics'[Year] = MaxYear)
+			VAR ValuePrevious = CALCULATE([Selected City Metric], 'City Metrics'[Year] = PrevYear)
+			VAR YoYChange = ValueCurrent - ValuePrevious
+			
+			RETURN
+			YoYChange
+			
+			```
+		lineageTag: 02c99f93-5d90-4b78-b7cf-b92879ecab63
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Analysis - Years Above Average' = ```
+			
+			COUNTROWS(
+			    FILTER(
+			        ALL('City Metrics'[Year]),
+			        [Selected City Metric] > [All Cities Benchmark]
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: b7f9aea7-bf0d-4fbe-9d8b-298c69adff48
+
+	measure 'Page 1 - Bar Chart - HTML Header V2' = ```
+			
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			VAR MetricName = 
+			    SWITCH(
+			        MetricOrder,
+			        0, "Livability Index",
+			        1, "Housing Affordability",
+			        2, "Transit Quality",
+			        3, "Green Space",
+			        4, "Emissions"
+			    )
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			
+			
+			VAR TopCityTable = 
+			    ADDCOLUMNS(
+			        ALL('City Lookup'[City]),
+			        "@Value", CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			    )
+			
+			VAR TopCity = TOPN(1, TopCityTable, [@Value], DESC)
+			VAR TopCityName = MAXX(TopCity, 'City Lookup'[City])
+			VAR TopValue = MAXX(TopCity, [@Value])
+			
+			
+			VAR SelectedCityName = SELECTEDVALUE('City Lookup'[City])
+			VAR SelectedValue = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			
+			
+			VAR BenchmarkValue = CALCULATE([All Cities Benchmark], 'City Metrics'[Year] = CurrentYear)
+			
+			
+			VAR GapVsBenchmark = DIVIDE(SelectedValue - BenchmarkValue, BenchmarkValue, 0)
+			
+			
+			VAR IsAboveBenchmark = (SelectedValue > BenchmarkValue)
+			VAR IsNegativeBenefit = MetricOrder = 1 || MetricOrder = 4 
+			
+			VAR ColorGap = 
+			    SWITCH(TRUE(),
+			        NOT(IsNegativeBenefit) && IsAboveBenchmark, "#0066CC",
+			        NOT(IsNegativeBenefit) && NOT(IsAboveBenchmark), "#C62828",
+			        IsNegativeBenefit && NOT(IsAboveBenchmark), "#0066CC",
+			        IsNegativeBenefit && IsAboveBenchmark, "#C62828",
+			        "#0066CC"
+			    )
+			
+			
+			VAR CitiesAbove = COUNTROWS(FILTER(TopCityTable, [@Value] > BenchmarkValue))
+			
+			RETURN
+			"<style>
+			    @keyframes fadeInUp {
+			        from { opacity: 0; transform: translateY(8px); }
+			        to { opacity: 1; transform: translateY(0); }
+			    }
+			    .animate-bar-header { 
+			        animation: fadeInUp 0.8s ease-out forwards; 
+			    }
+			</style>
+			
+			<div class='animate-bar-header' style='font-family:system-ui,sans-serif;padding:8px 0;background:transparent;position:relative;line-height:1.2'>" &
+			  
+			  "<div style='display:inline-block;background:linear-gradient(135deg,#0066CC,#004C99);color:white;padding:3px 12px;border-radius:14px;font-size:11px;font-weight:600;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,102,204,0.2)'>" & 
+			    SelectedCityName &
+			  "</div>" &
+			  
+			  "<div style='font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:6px;padding-right:250px;line-height:1.3'>" & 
+			    MetricName & " <span style='color:#0066CC;font-weight:600'>(" & FORMAT(SelectedValue, "0.0") & " pts)</span>" &
+			  "</div>" &
+			  
+			  "<div style='font-size:17px;font-weight:700;margin-bottom:10px;padding-right:250px;line-height:1.3'>" &
+			    "<span style='color:" & ColorGap & "'>" & 
+			        IF(GapVsBenchmark >= 0, "+", "-") & FORMAT(ABS(GapVsBenchmark), "0.0%") & 
+			    "</span>" &
+			    " <span style='font-weight:500;color:#666666'>" & 
+			        IF(IsAboveBenchmark, "above", "below") & " benchmark" &
+			    "</span>" &
+			  "</div>" &
+			  
+			  "<div style='font-size:11px;color:#666666;font-weight:400;line-height:1.4'>" & 
+			    CitiesAbove & " cities above avg (" & FORMAT(BenchmarkValue, "0.0") & " pts) • " & TopCityName & " leads (" & FORMAT(TopValue, "0.0") & ") • Year: " & CurrentYear &
+			  "</div>" &
+			  
+			"</div>"
+			```
+		lineageTag: 1c79ae53-2ed4-429c-a48b-ffbe6c898d71
+
+	measure 'Page 1 - Table - HTML Header V2' = ```
+			
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			VAR MetricName =
+			    SWITCH(
+			        MetricOrder,
+			        0, "Livability Index",
+			        1, "Housing Affordability",
+			        2, "Transit Quality",
+			        3, "Green Space",
+			        4, "Emissions",
+			        "Selected Metric"
+			    )
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			
+			
+			VAR SelectedCityName = SELECTEDVALUE('City Lookup'[City])
+			VAR SelectedValue = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			
+			
+			VAR CityRank = 
+			    RANKX(
+			        ALL('City Lookup'[City]),
+			        CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear),
+			        ,
+			        DESC,
+			        DENSE
+			    )
+			
+			
+			VAR PrevYear = CurrentYear - 1
+			VAR CitiesWithGrowth =
+			    ADDCOLUMNS(
+			        ALL('City Lookup'[City]),
+			        "@Growth",
+			        CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear) -
+			        CALCULATE([Selected Metric], 'City Metrics'[Year] = PrevYear)
+			    )
+			VAR TopImprover = TOPN(1, CitiesWithGrowth, [@Growth], DESC)
+			VAR TopImproverName = MAXX(TopImprover, 'City Lookup'[City])
+			VAR TopImprovementValue = MAXX(TopImprover, [@Growth])
+			
+			RETURN
+			"<style>
+			    @keyframes fadeInUp {
+			        from { opacity: 0; transform: translateY(8px); }
+			        to { opacity: 1; transform: translateY(0); }
+			    }
+			    .animate-header { 
+			        animation: fadeInUp 0.8s ease-out forwards; 
+			    }
+			</style>
+			
+			<div class='animate-header' style='font-family:system-ui,sans-serif;padding:8px 0;background:transparent;position:relative;line-height:1.2'>" &
+			 
+			  "<div style='display:inline-block;background:linear-gradient(135deg,#0066CC,#004C99);color:white;padding:3px 12px;border-radius:14px;font-size:11px;font-weight:600;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,102,204,0.2)'>" &
+			    SelectedCityName &
+			  "</div>" &
+			 
+			  "<div style='font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:6px;padding-right:250px;line-height:1.3'>" &
+			    MetricName & " Rank: <span style='color:#0066CC;font-weight:700'>#" & CityRank & "</span>" &
+			  "</div>" &
+			 
+			  "<div style='font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:10px;padding-right:250px;line-height:1.3'>" &
+			    "<span style='font-weight:500;color:#666666'>Current Value:</span> <span style='color:#0066CC'>" & FORMAT(SelectedValue, "0.0") & "</span>" &
+			    "<span style='font-weight:500;color:#666666;font-size:14px'> pts</span>" &
+			  "</div>" &
+			 
+			  "<div style='font-size:11px;color:#666666;font-weight:400;line-height:1.4'>" &
+			    IF(
+			        NOT(ISBLANK(TopImprovementValue)) && TopImprovementValue > 0,
+			        "Biggest YoY gain: <span style='font-weight:600;color:#1a1a1a'>" & TopImproverName & " (+" & FORMAT(TopImprovementValue, "0.0") & " pts)</span>",
+			        "Stable performance across cities"
+			    ) & " • Year: " & CurrentYear &
+			  "</div>" &
+			 
+			"</div>"
+			```
+		lineageTag: 91299b42-0baf-4af6-a474-6e2602720379
+
+	measure 'Tooltip - Gap vs Benchmark' = ```
+			
+			VAR CurrentValue = [Selected City Metric]
+			VAR BenchmarkValue = [All Cities Benchmark]
+			VAR Gap = CurrentValue - BenchmarkValue
+			
+			RETURN
+			Gap
+			
+			```
+		lineageTag: 6c5c184d-f83a-4312-873d-aa31b3ce079d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tooltip - Gap vs Benchmark %' = ```
+			
+			VAR CurrentValue = [Selected City Metric]
+			VAR BenchmarkValue = [All Cities Benchmark]
+			VAR GapPct = DIVIDE(CurrentValue - BenchmarkValue, BenchmarkValue, 0)
+			
+			RETURN
+			GapPct
+			
+			```
+		lineageTag: 8a877e33-579f-4f8f-b3ee-c8d4b389402e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Filter Panel - Complete' = ```
+			
+			VAR SelectedCity = SELECTEDVALUE('City Lookup'[City], "All Cities")
+			VAR SelectedYear = SELECTEDVALUE('City Metrics'[Year], "All Years")
+			
+			RETURN
+			"<style>body,html{overflow:hidden!important;margin:0;padding:0}*{overflow:hidden!important;scrollbar-width:none!important;box-sizing:border-box}::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}</style>" &
+			"<div style='font-family:system-ui,sans-serif;padding:0;background:transparent;height:700px;width:220px;display:flex;flex-direction:column;overflow:hidden!important;margin:0'>" &
+			
+			  "<!-- 🎯 HEADER SECTION -->" &
+			  "<div style='padding:20px 18px 14px;border-bottom:1px solid rgba(255,255,255,0.1)'>" &
+			    
+			    "<!-- Main Title -->" &
+			    "<div style='font-size:19px;font-weight:700;color:#FFFFFF;margin-bottom:5px;letter-spacing:-0.03em'>" &
+			      "Filters & Settings" &
+			    "</div>" &
+			    
+			    "<!-- Subtitle/Instructions -->" &
+			    "<div style='font-size:11px;color:rgba(255,255,255,0.65);font-weight:400;line-height:1.4'>" &
+			      "Select city and year to explore<br/>performance metrics across time" &
+			    "</div>" &
+			    
+			  "</div>" &
+			
+			  "<!-- 🏙️ CITY FILTER SECTION -->" &
+			  "<div style='padding:18px 18px 0'>" &
+			    
+			    "<!-- Label -->" &
+			    "<div style='font-size:11px;font-weight:600;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:9px;display:flex;align-items:center'>" &
+			      "<span style='display:inline-block;width:6px;height:6px;background:#66B2FF;border-radius:50%;margin-right:8px;flex-shrink:0'></span>City" &
+			    "</div>" &
+			    
+			    "<!-- Dropdown Placeholder -->" &
+			    "<div style='height:40px;background:transparent;margin-bottom:3px'></div>" &
+			    
+			    "<!-- Helper Text -->" &
+			    "<div style='font-size:10px;color:rgba(255,255,255,0.5);font-weight:400;font-style:italic'>" &
+			      "Compare individual city or view all" &
+			    "</div>" &
+			    
+			  "</div>" &
+			
+			  "<!-- 📅 YEAR FILTER SECTION -->" &
+			  "<div style='padding:18px 18px 0'>" &
+			    
+			    "<!-- Label -->" &
+			    "<div style='font-size:11px;font-weight:600;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:9px;display:flex;align-items:center'>" &
+			      "<span style='display:inline-block;width:6px;height:6px;background:#FFB74D;border-radius:50%;margin-right:8px;flex-shrink:0'></span>Year" &
+			    "</div>" &
+			    
+			    "<!-- Dropdown Placeholder -->" &
+			    "<div style='height:40px;background:transparent;margin-bottom:3px'></div>" &
+			    
+			    "<!-- Helper Text -->" &
+			    "<div style='font-size:10px;color:rgba(255,255,255,0.5);font-weight:400;font-style:italic'>" &
+			      "Historical data from 2015 to 2024" &
+			    "</div>" &
+			    
+			  "</div>" &
+			
+			  "<!-- SPACER -->" &
+			  "<div style='flex:1;min-height:0'></div>" &
+			
+			  "<!-- 📌 BOTTOM SECTION -->" &
+			  "<div style='padding:13px 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px'>" &
+			    
+			    "<!-- Active Filters (ESQUERDA) -->" &
+			    "<div style='flex:1'>" &
+			      
+			      "<!-- Section Header -->" &
+			      "<div style='font-size:9px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px'>" &
+			        "Active Filters" &
+			      "</div>" &
+			      
+			      "<!-- City Selection -->" &
+			      "<div style='font-size:11px;color:rgba(255,255,255,0.85);margin-bottom:5px;font-weight:500;display:flex;align-items:center'>" &
+			        "<svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#66B2FF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' style='margin-right:6px;flex-shrink:0'><polyline points='20 6 9 17 4 12'/></svg>" &
+			        "<span style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap'>" & SelectedCity & "</span>" &
+			      "</div>" &
+			      
+			      "<!-- Year Selection -->" &
+			      "<div style='font-size:11px;color:rgba(255,255,255,0.85);font-weight:500;display:flex;align-items:center'>" &
+			        "<svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#FFB74D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' style='margin-right:6px;flex-shrink:0'><polyline points='20 6 9 17 4 12'/></svg>" &
+			        "<span style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap'>" & SelectedYear & "</span>" &
+			      "</div>" &
+			      
+			    "</div>" &
+			    
+			    "<!-- Last Refreshed (DIREITA) -->" &
+			    "<div style='flex-shrink:0'>" &
+			      "<div style='font-size:8px;color:rgba(255,255,255,0.4);font-weight:400;line-height:1.4;text-align:right'>" &
+			        "Last refreshed<br/>" &
+			        "<span style='color:rgba(255,255,255,0.6);font-weight:500'>16/01/2026</span>" &
+			      "</div>" &
+			    "</div>" &
+			    
+			  "</div>" &
+			
+			"</div>"
+			```
+		lineageTag: 6659ad1c-f80c-4239-a828-e1e05b82e159
+
+	measure 'Page 1 - Line Chart - Y Axis Max Smart' = ```
+			
+			VAR CityMin = MINX(ALL('City Metrics'[Year]), [Selected City Metric])
+			VAR BenchmarkMin = MINX(ALL('City Metrics'[Year]), [All Cities Benchmark])
+			VAR OverallMin = MIN(CityMin, BenchmarkMin)
+			
+			VAR CityMax = MAXX(ALL('City Metrics'[Year]), [Selected City Metric])
+			VAR BenchmarkMax = MAXX(ALL('City Metrics'[Year]), [All Cities Benchmark])
+			VAR OverallMax = MAX(CityMax, BenchmarkMax)
+			
+			VAR DataRange = OverallMax - OverallMin
+			
+			
+			VAR PaddingPct = 
+			    SWITCH(
+			        TRUE(),
+			        DataRange < 5, 0.15,     
+			        DataRange < 10, 0.12,     
+			        DataRange < 20, 0.10,     
+			        0.08                      
+			    )
+			
+			VAR Padding = DataRange * PaddingPct
+			VAR AdjustedMin = OverallMin - Padding
+			VAR AdjustedMax = OverallMax + Padding
+			
+			
+			VAR RoundingFactor = 
+			    SWITCH(
+			        TRUE(),
+			        DataRange < 10, 1,       
+			        DataRange < 30, 2,       
+			        5                        
+			    )
+			
+			VAR SmartMin = FLOOR(AdjustedMin, RoundingFactor)
+			VAR SmartMax = CEILING(AdjustedMax, RoundingFactor)
+			
+			RETURN
+			SmartMax
+			
+			```
+		formatString: 0
+		lineageTag: 3d803bf8-2d7e-4be3-9eba-57d66c6d7930
+
+	measure 'Page 1 - Line Chart - Y Axis Min Smart' = ```
+			
+			VAR CityMin = MINX(ALL('City Metrics'[Year]), [Selected City Metric])
+			VAR BenchmarkMin = MINX(ALL('City Metrics'[Year]), [All Cities Benchmark])
+			VAR OverallMin = MIN(CityMin, BenchmarkMin)
+			
+			VAR CityMax = MAXX(ALL('City Metrics'[Year]), [Selected City Metric])
+			VAR BenchmarkMax = MAXX(ALL('City Metrics'[Year]), [All Cities Benchmark])
+			VAR OverallMax = MAX(CityMax, BenchmarkMax)
+			
+			VAR DataRange = OverallMax - OverallMin
+			
+			
+			VAR PaddingPct = 
+			    SWITCH(
+			        TRUE(),
+			        DataRange < 5, 0.15,     
+			        DataRange < 10, 0.12,   
+			        DataRange < 20, 0.10,    
+			        0.08                      
+			    )
+			
+			VAR Padding = DataRange * PaddingPct
+			VAR AdjustedMin = OverallMin - Padding
+			VAR AdjustedMax = OverallMax + Padding
+			
+			
+			VAR RoundingFactor = 
+			    SWITCH(
+			        TRUE(),
+			        DataRange < 10, 1,        
+			        DataRange < 30, 2,        
+			        5                       
+			    )
+			
+			VAR SmartMin = FLOOR(AdjustedMin, RoundingFactor)
+			VAR SmartMax = CEILING(AdjustedMax, RoundingFactor)
+			
+			RETURN
+			SmartMin
+			
+			```
+		formatString: 0
+		lineageTag: 0c15aa4c-85ce-47dc-ad2d-851668d9cdaf
+
+	measure 'Bar Chart Value Display' = ```
+			
+			VAR CidadeNoEixo = SELECTEDVALUE('City Slicer'[City]) 
+			RETURN
+			CALCULATE(
+			    [Selected Metric], 
+			    REMOVEFILTERS('City Lookup'[City]), 
+			    'City Lookup'[City] = CidadeNoEixo   
+			)
+			```
+		lineageTag: a08133c0-2d1b-414f-b4c4-3cd7ed033b55
+
+	measure 'Page 1 - Bar Chart Color' = ```
+			
+			
+			VAR CidadeNoEixo = SELECTEDVALUE('City Slicer'[City])
+			
+			
+			VAR CidadeSelecionadaNoSlicer = SELECTEDVALUE('City Lookup'[City])
+			
+			
+			VAR ValorDaBarra = [Bar Chart Value Display]
+			
+			
+			VAR BenchmarkValue = [All Cities Benchmark]
+			VAR Gap = ValorDaBarra - BenchmarkValue
+			
+			RETURN
+			IF(
+			  
+			    CidadeNoEixo = CidadeSelecionadaNoSlicer && NOT(ISBLANK(CidadeSelecionadaNoSlicer)),
+			    "#0066CC",
+			    
+			 
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(ValorDaBarra), "#F0F0F0", 
+			        Gap > 2, "#4A5D66",  
+			        Gap > 0, "#6A7E88",  
+			        Gap > -2, "#A0B1BA", 
+			        "#C5D1D8"             
+			    )
+			)
+			
+			```
+		lineageTag: 18f4419d-4b98-4ecc-b389-9bf915876b5e
+
+	measure 'Page 1 - Bar Chart - Title' = ```
+			
+			VAR MetricOrder = SELECTEDVALUE('Parameter'[Parameter Order])
+			VAR MetricName = 
+			    SWITCH(
+			        MetricOrder,
+			        0, "Livability Index",
+			        1, "Housing Affordability",
+			        2, "Transit Quality",
+			        3, "Green Space",
+			        4, "Emissions",
+			        "Selected Metric"
+			    )
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			
+			
+			VAR TopCityTable = 
+			    ADDCOLUMNS(
+			        ALL('City Lookup'[City]),
+			        "@Value", CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			    )
+			VAR TopCity = TOPN(1, TopCityTable, [@Value], DESC)
+			VAR TopCityName = MAXX(TopCity, 'City Lookup'[City])
+			VAR TopValue = MAXX(TopCity, [@Value])
+			
+			
+			VAR BottomCity = TOPN(1, TopCityTable, [@Value], ASC)
+			VAR BottomCityName = MAXX(BottomCity, 'City Lookup'[City])
+			VAR BottomValue = MAXX(BottomCity, [@Value])
+			
+			
+			VAR CityGap = TopValue - BottomValue
+			VAR GapPct = DIVIDE(CityGap, BottomValue, 0)
+			
+			VAR TitleText = 
+			    TopCityName & " leads in " & MetricName & 
+			    " (" & FORMAT(TopValue, "0.0") & " pts) ⁕ " &
+			    FORMAT(GapPct, "0.0%") & " ahead of " & BottomCityName
+			
+			RETURN
+			TitleText
+			
+			```
+		lineageTag: 6649800e-9ee3-4318-9fb6-5611fa6538c0
+
+	measure 'Page 1 - Bar Chart - Subtitle' = ```
+			
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			VAR BenchmarkValue = 
+			    CALCULATE(
+			        [All Cities Benchmark],
+			        'City Metrics'[Year] = CurrentYear
+			    )
+			
+			VAR CitiesAbove = 
+			    COUNTROWS(
+			        FILTER(
+			            ALL('City Lookup'[City]),
+			            CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear) > BenchmarkValue
+			        )
+			    )
+			VAR CitiesBelow = 
+			    COUNTROWS(
+			        FILTER(
+			            ALL('City Lookup'[City]),
+			            CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear) < BenchmarkValue
+			        )
+			    )
+			
+			VAR PrevYear = CurrentYear - 1
+			VAR CitiesWithGrowth = 
+			    ADDCOLUMNS(
+			        ALL('City Lookup'[City]),
+			        "@CurrentValue", CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear),
+			        "@PrevValue", CALCULATE([Selected Metric], 'City Metrics'[Year] = PrevYear),
+			        "@Growth", 
+			            CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear) - 
+			            CALCULATE([Selected Metric], 'City Metrics'[Year] = PrevYear)
+			    )
+			VAR TopGrower = TOPN(1, CitiesWithGrowth, [@Growth], DESC)
+			VAR TopGrowerName = MAXX(TopGrower, 'City Lookup'[City])
+			VAR TopGrowth = MAXX(TopGrower, [@Growth])
+			
+			
+			VAR DistributionText = 
+			    CitiesAbove & " cities above average (" & FORMAT(BenchmarkValue, "0.0") & "), " &
+			    CitiesBelow & " below"
+			
+			
+			VAR GrowthText = 
+			    IF(
+			        NOT(ISBLANK(TopGrowth)) && TopGrowth > 0,
+			        " • Best YoY: " & TopGrowerName & " (" & FORMAT(TopGrowth, "+0.0") & " pts)",
+			        ""
+			    )
+			
+			VAR SubtitleText = 
+			    DistributionText & GrowthText & " • Year: " & CurrentYear
+			
+			RETURN
+			SubtitleText
+			
+			```
+		lineageTag: c7805af8-3b62-4de1-bd0b-9fadac7d2c23
+
+	measure 'Page 1 - Ranking Fixed Rank' =
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			VAR RankValue = RANKX(
+			    ALL('City Lookup'[City]),
+			    CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear),
+			    ,
+			    DESC,
+			    DENSE
+			)
+			
+			RETURN RankValue
+		formatString: 0
+		lineageTag: a0a73cc4-062b-44fa-9532-0c68476681e4
+
+	measure 'Page 1 - Ranking Display Value' = ```
+			
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			VAR Valuee = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			
+			RETURN 
+			Valuee
+			
+			```
+		lineageTag: 6017bfff-0b05-45c3-af76-31429a3fc340
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Page 1 - Ranking Display Sparkline' = ```
+			
+			VAR CurrentCity = SELECTEDVALUE('City Lookup'[City])
+			VAR SelectedYear = SELECTEDVALUE('City Metrics'[Year])
+			VAR HasYearFilter = NOT(ISBLANK(SelectedYear))
+			
+			VAR XMinYear = 2015
+			VAR XMaxYear = 2024
+			
+			VAR SparklineTable = 
+			    ADDCOLUMNS(
+			        CALCULATETABLE(
+			            FILTER(
+			                ALL('City Metrics'[Year]),
+			                'City Metrics'[Year] >= 2015 && 'City Metrics'[Year] <= 2024
+			            )
+			        ),
+			        "@Year", 'City Metrics'[Year],
+			        "@Value", CALCULATE([Selected Metric], 'City Lookup'[City] = CurrentCity),
+			        "@X", 5 + INT(74 * DIVIDE('City Metrics'[Year] - XMinYear, XMaxYear - XMinYear))
+			    )
+			
+			VAR YMinValue = MINX(SparklineTable, [@Value])
+			VAR YMaxValue = MAXX(SparklineTable, [@Value])
+			VAR YRange = YMaxValue - YMinValue
+			VAR SafeRange = IF(YRange = 0, 1, YRange)
+			
+			VAR SparklineTableWithY = 
+			    ADDCOLUMNS(
+			        SparklineTable,
+			        "@Y", 3 + INT(16 * DIVIDE([@Value] - YMinValue, SafeRange))
+			    )
+			
+			VAR Points = 
+			    CONCATENATEX(
+			        SparklineTableWithY,
+			        [@X] & "," & (22 - [@Y]),
+			        " ",
+			        [@Year],
+			        ASC
+			    )
+			
+			VAR ValCurrent = IF(HasYearFilter, CALCULATE([Selected Metric], 'City Lookup'[City] = CurrentCity, 'City Metrics'[Year] = SelectedYear), BLANK())
+			VAR ValPrev = IF(HasYearFilter, CALCULATE([Selected Metric], 'City Lookup'[City] = CurrentCity, 'City Metrics'[Year] = SelectedYear - 1), BLANK())
+			VAR Diff = ValCurrent - ValPrev
+			VAR BulletColor = IF(Diff >= 0, "%230066CC", "%23C75B5B")
+			
+			VAR SelectedX = IF(HasYearFilter, 5 + INT(74 * DIVIDE(SelectedYear - XMinYear, XMaxYear - XMinYear)), BLANK())
+			VAR SelectedY = IF(HasYearFilter, 22 - (3 + INT(16 * DIVIDE(ValCurrent - YMinValue, SafeRange))), BLANK())
+			
+			
+			VAR DotMarker = 
+			    IF(
+			        HasYearFilter,
+			        "<circle cx='" & SelectedX & "' cy='" & SelectedY & "' r='3' fill='" & BulletColor & "' stroke='white' stroke-width='1'>" &
+			        "<animate attributeName='opacity' from='0' to='1' dur='0.5s' begin='1s' fill='freeze' />" &
+			        "</circle>",
+			        ""
+			    )
+			
+			VAR Defs = 
+			    "<defs>" &
+			    "<linearGradient id='grad" & SUBSTITUTE(CurrentCity, " ", "") & "' x1='0' y1='0' x2='0' y2='22' gradientUnits='userSpaceOnUse'>" &
+			    "<stop stop-color='%230066CC' offset='0' />" &
+			    "<stop stop-color='transparent' offset='1' />" &
+			    "</linearGradient>" &
+			    "</defs>"
+			
+			VAR LineColor = "%23BDBDBD" 
+			
+			
+			VAR SVGImageURL = 
+			    IF(
+			        NOT(ISBLANK(CurrentCity)),
+			        "data:image/svg+xml;utf8," &
+			        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 22'>" & 
+			        Defs &
+			        "<polyline fill='url(%23grad" & SUBSTITUTE(CurrentCity, " ", "") & ")' fill-opacity='0.2' stroke='" & LineColor & "' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' " &
+			        "points='0 22 " & Points & " 84 22' stroke-dasharray='500' stroke-dashoffset='500'>" & 
+			        "<animate attributeName='stroke-dashoffset' from='500' to='0' dur='1.2s' begin='0s' fill='freeze' />" &
+			        "<animate attributeName='fill-opacity' from='0' to='0.2' dur='0.5s' begin='1s' fill='freeze' />" &
+			        "</polyline>" &
+			        DotMarker &
+			        "</svg>",
+			        BLANK()
+			    )
+			
+			RETURN SVGImageURL
+			```
+		lineageTag: 164947c9-b9f8-402d-8f37-c53b7c8191cc
+		dataCategory: ImageUrl
+
+	measure 'Page 1 - Ranking Display Gap' = ```
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			VAR CurrentValue = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			VAR BenchmarkValue = CALCULATE([All Cities Benchmark], 'City Metrics'[Year] = CurrentYear)
+			VAR Gap = CurrentValue - BenchmarkValue
+			
+			
+			VAR AllCitiesGap = 
+			    ADDCOLUMNS(
+			        ALL('City Lookup'[City]),
+			        "@GapValue", 
+			            VAR Curr = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			            VAR Bench = CALCULATE([All Cities Benchmark], 'City Metrics'[Year] = CurrentYear)
+			            RETURN Curr - Bench
+			    )
+			
+			VAR Top3Positive = TOPN(3, AllCitiesGap, [@GapValue], DESC)
+			VAR Top3Negative = TOPN(3, AllCitiesGap, [@GapValue], ASC)
+			VAR CurrentCity = SELECTEDVALUE('City Lookup'[City])
+			
+			VAR IsTop3Positive = COUNTROWS(FILTER(Top3Positive, 'City Lookup'[City] = CurrentCity)) > 0
+			VAR IsTop3Negative = COUNTROWS(FILTER(Top3Negative, 'City Lookup'[City] = CurrentCity)) > 0
+			
+			
+			VAR _BgColor = 
+			    IF(IsTop3Positive, "#E3F2FD",     
+			    IF(IsTop3Negative, "#FFEBEE",     
+			    "transparent"))                   
+			
+			VAR _TextColor = 
+			    IF(IsTop3Positive, "#1565C0",     
+			    IF(IsTop3Negative, "#C62828",     
+			    "#252423"))                       
+			
+			VAR FormattedValue = FORMAT(Gap, "+0.0;-0.0")
+			
+			
+			VAR SVGOutput = 
+			    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='75'>
+			    <rect x='0' y='0' width='240' height='75' rx='38' fill='" & _BgColor & "'/>
+			    <text x='120' y='50' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-size='40' font-weight='600' letter-spacing='-0.02em' fill='" & _TextColor & "'>" & FormattedValue & "</text>
+			    </svg>"
+			
+			RETURN SVGOutput
+			```
+		lineageTag: cd43436d-0e98-4e9f-a3bd-afaca417db67
+		dataCategory: ImageUrl
+
+	measure 'Page 1 - Ranking YoY Display' = ```
+			VAR CurrentYear = MAX('City Metrics'[Year])
+			VAR PrevYear = CurrentYear - 1
+			VAR CurrentValue = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			VAR PrevValue = CALCULATE([Selected Metric], 'City Metrics'[Year] = PrevYear)
+			VAR Change = CurrentValue - PrevValue
+			
+			
+			VAR AllCitiesYoY = 
+			    ADDCOLUMNS(
+			        ALL('City Lookup'[City]),
+			        "@YoYChange", 
+			            VAR Curr = CALCULATE([Selected Metric], 'City Metrics'[Year] = CurrentYear)
+			            VAR Prev = CALCULATE([Selected Metric], 'City Metrics'[Year] = PrevYear)
+			            RETURN Curr - Prev
+			    )
+			
+			VAR Top3Positive = TOPN(3, AllCitiesYoY, [@YoYChange], DESC)
+			VAR Top3Negative = TOPN(3, AllCitiesYoY, [@YoYChange], ASC)
+			VAR CurrentCity = SELECTEDVALUE('City Lookup'[City])
+			
+			VAR IsTop3Positive = COUNTROWS(FILTER(Top3Positive, 'City Lookup'[City] = CurrentCity)) > 0
+			VAR IsTop3Negative = COUNTROWS(FILTER(Top3Negative, 'City Lookup'[City] = CurrentCity)) > 0
+			
+			
+			VAR _BgColor = 
+			    IF(IsTop3Positive, "#E3F2FD",     
+			    IF(IsTop3Negative, "#FFEBEE",     
+			    "transparent"))                   
+			
+			VAR _TextColor = 
+			    IF(IsTop3Positive, "#1565C0",     
+			    IF(IsTop3Negative, "#C62828",     
+			    "#252423"))                       
+			
+			VAR FormattedValue = FORMAT(Change, "+0.0;-0.0")
+			
+			
+			VAR SVGOutput = 
+			    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='75'>
+			    <rect x='0' y='0' width='240' height='75' rx='38' fill='" & _BgColor & "'/>
+			    <text x='120' y='50' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-size='40' font-weight='600' letter-spacing='-0.02em' fill='" & _TextColor & "'>" & FormattedValue & "</text>
+			    </svg>"
+			
+			RETURN SVGOutput
+			```
+		lineageTag: 7d04206c-9d89-4e0e-8b10-1fe8e5534879
+		dataCategory: ImageUrl
 
 	column Column
 		formatString: 0
@@ -123,5 +1901,7 @@ table _Measures
 
 	annotation PBI_Id = 338e3a33a6c54306a75b3bef1d119f33
 
-	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+	annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a calculated table name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "bfd8b2c53424f076324a",
-  "displayName": "Executive Summary",
+  "name": "99f5c5c034c8bbd7d02a",
+  "displayName": "Performance",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
@@ -14,7 +14,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'background_1.jpg'"
+                    "Value": "'background_2.jpg'"
                   }
                 }
               },
@@ -23,14 +23,14 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "background_18585712378984418.jpg"
+                    "ItemName": "background_230548140575915184.jpg"
                   }
                 }
               },
               "scaling": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Fit'"
+                    "Value": "'Fill'"
                   }
                 }
               }
@@ -45,26 +45,6 @@
           }
         }
       }
-    ],
-    "outspacePane": [
-      {
-        "properties": {
-          "width": {
-            "expr": {
-              "Literal": {
-                "Value": "200L"
-              }
-            }
-          }
-        }
-      }
     ]
-  },
-  "visualInteractions": [
-    {
-      "source": "200c6d4db60c568561a7",
-      "target": "5e5565cf429743bde285",
-      "type": "NoFilter"
-    }
-  ]
+  }
 }

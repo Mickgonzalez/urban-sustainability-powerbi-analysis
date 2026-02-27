@@ -1,0 +1,19 @@
+table 'City Slicer'
+	lineageTag: 312cad2c-9327-4c37-9912-6f147d5d3321
+
+	column City
+		lineageTag: 160f0a40-e581-4ab3-a4e2-d18d6e9755ef
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: City Lookup[City]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'City Slicer' = calculated
+		mode: import
+		source =
+				
+				DISTINCT('City Lookup'[City])
+
+	annotation PBI_Id = 1741b75858eb4445935723567815da92
+

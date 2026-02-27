@@ -31,6 +31,13 @@
           "expanded": {
             "expr": {
               "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
                 "Value": "true"
               }
             }
@@ -66,6 +73,26 @@
         {
           "name": "fabric_16_color22120285643756954.png",
           "path": "fabric_16_color22120285643756954.png",
+          "type": "Image"
+        },
+        {
+          "name": "background_18585712378984418.jpg",
+          "path": "background_18585712378984418.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "background_230548140575915184.jpg",
+          "path": "background_230548140575915184.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "background_3766956257052211.jpg",
+          "path": "background_3766956257052211.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "background_45855161149174685.jpg",
+          "path": "background_45855161149174685.jpg",
           "type": "Image"
         }
       ]
